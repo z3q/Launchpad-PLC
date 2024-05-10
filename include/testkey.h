@@ -1,0 +1,2 @@
+//UID for testing
+const unsigned char validUID[4] = {0x70, 0x12, 0x25, 0x3C};
