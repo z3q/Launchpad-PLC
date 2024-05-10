@@ -110,7 +110,7 @@ void loop()
   // PWM_PIN,
   analogWrite(PWM_PIN, map(turnValue, 0, 1023, 0, 255));
 
-  // TURNLEFT_PIN,
+  // TURNLEFT_PIN, TURNRIGHT_PIN,
   if (blink3Hz.fire())
   {
     if (turnValue >= 1000)
@@ -134,8 +134,7 @@ void loop()
       digitalWrite(TURNRIGHT_PIN, !digitalRead(TURNRIGHT_PIN));
     }
   }
-  // TURNRIGHT_PIN,
-
+  
   // STOP_PIN,
 
   // LIGHTS_PIN,
@@ -143,13 +142,7 @@ void loop()
   // ELBREAK_PIN,
 
   // RELAY_PIN
-  /*
-    if (blink.fire()) // timer.fire(false) - run once after timer.start() and stay TRUE
-    {
-      digitalWrite(RED_LED, !digitalRead(RED_LED));
-      blink.update(333); // UID valid
-      // sleep(100);
-    }*/
+
 }
 
 // returns TRUE only if a card with valid UID recognized
